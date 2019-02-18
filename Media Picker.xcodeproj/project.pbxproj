@@ -12,6 +12,10 @@
 		5D929DFA221A412200D60EE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D929DF8221A412200D60EE9 /* Main.storyboard */; };
 		5D929DFC221A412300D60EE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D929DFB221A412300D60EE9 /* Assets.xcassets */; };
 		5D929DFF221A412300D60EE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D929DFD221A412300D60EE9 /* LaunchScreen.storyboard */; };
+		5D929E0B221A435F00D60EE9 /* MediaPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D929E09221A435F00D60EE9 /* MediaPickerViewController.swift */; };
+		5D929E0C221A435F00D60EE9 /* MediaPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D929E0A221A435F00D60EE9 /* MediaPickerViewController.xib */; };
+		5D929E0F221A43CD00D60EE9 /* MediaPickerEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D929E0E221A43CD00D60EE9 /* MediaPickerEnums.swift */; };
+		5D929E11221A46A000D60EE9 /* MediaPickerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D929E10221A46A000D60EE9 /* MediaPickerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		5D929DFB221A412300D60EE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D929DFE221A412300D60EE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D929E00221A412300D60EE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D929E09221A435F00D60EE9 /* MediaPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPickerViewController.swift; sourceTree = "<group>"; };
+		5D929E0A221A435F00D60EE9 /* MediaPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaPickerViewController.xib; sourceTree = "<group>"; };
+		5D929E0E221A43CD00D60EE9 /* MediaPickerEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPickerEnums.swift; sourceTree = "<group>"; };
+		5D929E10221A46A000D60EE9 /* MediaPickerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPickerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 		5D929DF3221A412200D60EE9 /* Media Picker */ = {
 			isa = PBXGroup;
 			children = (
+				5D929E06221A432900D60EE9 /* Media Picker */,
 				5D929DF4221A412200D60EE9 /* AppDelegate.swift */,
 				5D929DF6221A412200D60EE9 /* ViewController.swift */,
 				5D929DF8221A412200D60EE9 /* Main.storyboard */,
@@ -62,6 +71,25 @@
 				5D929E00221A412300D60EE9 /* Info.plist */,
 			);
 			path = "Media Picker";
+			sourceTree = "<group>";
+		};
+		5D929E06221A432900D60EE9 /* Media Picker */ = {
+			isa = PBXGroup;
+			children = (
+				5D929E0D221A43BE00D60EE9 /* Helpers */,
+				5D929E09221A435F00D60EE9 /* MediaPickerViewController.swift */,
+				5D929E0A221A435F00D60EE9 /* MediaPickerViewController.xib */,
+				5D929E10221A46A000D60EE9 /* MediaPickerProtocol.swift */,
+			);
+			path = "Media Picker";
+			sourceTree = "<group>";
+		};
+		5D929E0D221A43BE00D60EE9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5D929E0E221A43CD00D60EE9 /* MediaPickerEnums.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +153,7 @@
 				5D929DFF221A412300D60EE9 /* LaunchScreen.storyboard in Resources */,
 				5D929DFC221A412300D60EE9 /* Assets.xcassets in Resources */,
 				5D929DFA221A412200D60EE9 /* Main.storyboard in Resources */,
+				5D929E0C221A435F00D60EE9 /* MediaPickerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +165,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D929DF7221A412200D60EE9 /* ViewController.swift in Sources */,
+				5D929E0B221A435F00D60EE9 /* MediaPickerViewController.swift in Sources */,
 				5D929DF5221A412200D60EE9 /* AppDelegate.swift in Sources */,
+				5D929E11221A46A000D60EE9 /* MediaPickerProtocol.swift in Sources */,
+				5D929E0F221A43CD00D60EE9 /* MediaPickerEnums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
