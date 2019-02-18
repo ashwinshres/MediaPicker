@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Media Picker app needs access to your microphone for video recording.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Media Picker app needs access to your photo library to select images from library.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Media Picker app needs camera access to get images clicked.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

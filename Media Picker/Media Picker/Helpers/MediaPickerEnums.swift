@@ -14,7 +14,7 @@ enum PickerMode {
     case library
 }
 
-enum MediaType {
+enum MediaType: Int {
     case all
     case video
     case photo

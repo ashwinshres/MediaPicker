@@ -6,8 +6,11 @@
 //  Copyright © 2019 InsightWorkshop. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol MediaPickerDelegate: class {
+    func didPickImage(_ image: UIImage)
     func didClose(viewController: MediaPickerViewController)
+    func didPickVideo(_ withPath : URL)
+    func showErrorMessage(_ message: String)
 }

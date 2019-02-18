@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,11 +13,42 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Media_Picker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WiI-2Z-HQW">
+                                <rect key="frame" x="136" y="228.5" width="103" height="30"/>
+                                <state key="normal" title="Image Selector"/>
+                                <connections>
+                                    <action selector="onPickerBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H8I-7D-HKx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScV-hx-EGg">
+                                <rect key="frame" x="137" y="273.5" width="101" height="30"/>
+                                <state key="normal" title="Video Selector"/>
+                                <connections>
+                                    <action selector="onPickerBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EyQ-KM-hgV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4A-BY-oYa">
+                                <rect key="frame" x="148" y="318.5" width="79" height="30"/>
+                                <state key="normal" title="All Selector"/>
+                                <connections>
+                                    <action selector="onPickerBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ao-gh-Hh1"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E4A-BY-oYa" firstAttribute="top" secondItem="ScV-hx-EGg" secondAttribute="bottom" constant="15" id="2ny-IP-0bt"/>
+                            <constraint firstItem="WiI-2Z-HQW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6iA-eJ-GJV"/>
+                            <constraint firstItem="ScV-hx-EGg" firstAttribute="centerX" secondItem="WiI-2Z-HQW" secondAttribute="centerX" id="8yp-0i-BBd"/>
+                            <constraint firstItem="ScV-hx-EGg" firstAttribute="top" secondItem="WiI-2Z-HQW" secondAttribute="bottom" constant="15" id="CTn-yy-MZq"/>
+                            <constraint firstItem="E4A-BY-oYa" firstAttribute="centerX" secondItem="ScV-hx-EGg" secondAttribute="centerX" id="Hb0-Sa-I5j"/>
+                            <constraint firstItem="WiI-2Z-HQW" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-100" id="aIt-r7-PWz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
