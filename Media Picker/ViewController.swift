@@ -51,6 +51,5 @@ extension ViewController: MediaPickerDelegate {
         print(message)
     }
     
-    
 }
 

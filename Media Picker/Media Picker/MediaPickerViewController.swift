@@ -164,7 +164,6 @@ class MediaPickerViewController: UIViewController {
     private func selectMediaFromCamera(){
         imagePicker.sourceType = .camera
         if AVCaptureDevice.authorizationStatus(for: .video) ==  .authorized {
-            
             present(imagePicker, animated: true, completion: nil)
         } else {
             AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler: { (granted :Bool) -> Void in
