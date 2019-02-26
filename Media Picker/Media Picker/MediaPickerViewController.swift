@@ -24,6 +24,7 @@ class MediaPickerViewController: UIViewController {
     public var croppingStyle: TOCropViewCroppingStyle = .default
     public var maximumVideoSizeInMb: Int?
     public var maximumImageSizeInMb: Int?
+    public var sourceView: UIView?
     
     private var hasCameraAccess = false
     private var hasLibraryAccess = false
@@ -202,7 +203,18 @@ class MediaPickerViewController: UIViewController {
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { cancel in
             self.delegate?.didClose(viewController: self)
         }))
-        present(actionSheet, animated: true, completion: nil)
+        
+        if MediaPickerHelper.isIpad() {
+            if let currentPopOverPresentationController = actionSheet.popoverPresentationController {
+                currentPopOverPresentationController.sourceView = sourceView
+                currentPopOverPresentationController.sourceRect = sourceView?.bounds ??  CGRect(x: MediaPickerHelper.getScreenWidth() / 2.0, y: MediaPickerHelper.getScreenHeight(), width: 10, height: 10)
+                currentPopOverPresentationController.permittedArrowDirections = .any
+                present(actionSheet, animated: true, completion: nil)
+            }
+        } else {
+            present(actionSheet, animated: true, completion: nil)
+        }
+        
     }
     
     func setDefaultImagePickerConfiguration() {

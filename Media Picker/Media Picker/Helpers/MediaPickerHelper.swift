@@ -17,6 +17,18 @@ class MediaPickerHelper {
         return (info[UIImagePickerController.InfoKey.mediaType] as? String ?? "") == "public.image"
     }
     
+    static func isIpad() -> Bool {
+        return UIDevice.current.userInterfaceIdiom == .pad
+    }
+    
+    static func getScreenWidth() -> CGFloat {
+        return UIScreen.main.bounds.width
+    }
+    
+    static func getScreenHeight() -> CGFloat {
+        return UIScreen.main.bounds.height
+    }
+    
 }
 
 extension AVURLAsset {
