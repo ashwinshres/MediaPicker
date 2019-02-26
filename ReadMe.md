@@ -87,6 +87,12 @@ https://github.com/TimOliver/TOCropViewController
         mediaPicker.0.modalPresentationStyle = .custom
         present(mediaPicker.0, animated: false, completion: nil)
 
+Actionsheet can not be displayed in ipad so, we need to make UIPopOverController, to choose between camera and gallery when used in iPad. <br>
+Thus, add:
+
+        mediaPicker.1.sourceView = your button or view where the popover controller is to be presenter
+
+
   Here <br>
   `let mediaPicker =   MediaPickerViewController.getMediaPicker(with: .camera)`
 
@@ -110,22 +116,21 @@ https://github.com/TimOliver/TOCropViewController
 Now add delegate to get the selected media in your view controller: <br>
 
     extension ViewController: MediaPickerDelegate {
-  
+
       func didPickImage(_ image: UIImage) {
         print("Image Picked")
       }
-  
+
       func didClose(viewController: MediaPickerViewController) {
         viewController.dismiss(animated: false, completion: nil)
       }
-  
+
       func didPickVideo(_ withPath: URL) {
         print("Did Pick Video")
       }
-  
+
       func showErrorMessage(_ message: String) {
         print(message)
       }
-  
-    }
 
+    }
