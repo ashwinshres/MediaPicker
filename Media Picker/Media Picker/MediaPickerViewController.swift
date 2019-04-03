@@ -64,8 +64,8 @@ class MediaPickerViewController: UIViewController {
     }
     
     private func setUpImgePickerController() {
-        imagePicker.allowsEditing = isCroppingEnabled
         imagePicker.delegate = self
+        imagePicker.allowsEditing = false
         switch mediaType {
         case .all:
              imagePicker.mediaTypes = [kUTTypeVideo as String, kUTTypeMovie as String, kUTTypeImage as String]
@@ -74,6 +74,7 @@ class MediaPickerViewController: UIViewController {
         case .video:
             imagePicker.mediaTypes = [kUTTypeVideo as String, kUTTypeMovie as String]
         }
+        
     }
     
     private func hasValidPermissions() -> Bool {

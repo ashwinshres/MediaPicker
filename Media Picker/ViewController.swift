@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         
         let mediaPicker = MediaPickerViewController.getMediaPicker(with: .camera)
         mediaPicker.1.setDefaultImagePickerConfiguration()
-        mediaPicker.1.mediaType = .video
+        mediaPicker.1.mediaType = .photo
         mediaPicker.1.pickerMode = .all
         mediaPicker.1.sourceView = sender
         mediaPicker.1.isCroppingEnabled = true
